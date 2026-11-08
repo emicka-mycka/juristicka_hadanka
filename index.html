@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
-   
-    
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
          <title>
         Juristické tajemství
         </title>
@@ -14,15 +13,29 @@
     <body>
         <label for="answer">Rok založení Juristů + rok založení UK - počet Juristů na jarním teambuildingu</label>
         <input type="number" id="answer" name="answer">
+        <button type="button" id="check-answer">Zkontrolovat</button>
         <p id="feedback" aria-live="polite"></p>
+        <a id="next-page-link" href="spravna_1.html" hidden>Pokračovat</a>
 
         <script>
             const answerInput = document.getElementById("answer");
+            const checkAnswerButton = document.getElementById("check-answer");
             const feedback = document.getElementById("feedback");
+            const nextPageLink = document.getElementById("next-page-link");
 
             answerInput.addEventListener("input", () => {
-                feedback.textContent = answerInput.value === "3337" ? "Správně" : "Špatně";
+                feedback.textContent = "";
+                nextPageLink.hidden = true;
+            });
+
+            checkAnswerButton.addEventListener("click", () => {
+                const isCorrect = answerInput.value === "3337";
+                feedback.textContent = isCorrect ? "Správně" : "Špatně";
+                nextPageLink.hidden = !isCorrect;
             });
         </script>
     </body>
+    <footer>
+        <p>© 2026 Juristi. Všechna práva vyhrazena.</p>
+    </footer>
 </html>
