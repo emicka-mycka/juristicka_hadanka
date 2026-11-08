@@ -10,7 +10,10 @@ h3 {
     color: #fa23fa;
 }
 
-
+body {
+    background-color: rgb(152, 50, 103);
+    color: rgb(255, 247, 252);
+}
 
 
 
