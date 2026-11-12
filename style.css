@@ -28,6 +28,15 @@ body {
     text-align: center;
 }
 
+header p {
+    font-size: 1.3em;
+}
+
+footer {
+    font-size: 0.7em;
+    color: rgb(255, 247, 252);
+}
+
 label {
     max-width: 40rem;
     line-height: 1.4;
